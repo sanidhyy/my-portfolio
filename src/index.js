@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 // import ReactDOM from 'react-dom';
 // import './index.css';
-import App from './App';
+import App from "./App";
 // import reportWebVitals from './reportWebVitals';
-import { createRoot } from 'react-dom/client';
+import { createRoot } from "react-dom/client";
+import "normalize.css";
 
-
-
-const domNode = document.getElementById('root');
+const domNode = document.getElementById("root");
 const root = createRoot(domNode);
 root.render(<App />);
 
