@@ -14,6 +14,16 @@ const Power = styled.button`
   border: 1px solid #000;
   width: 2.5rem;
   height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 255, 0, 0.4);
+    box-shadow: 0 0 8px 6px rgba(0, 255, 0, 0.4);
+  }
 `;
 
 const PowerButton = () => {
