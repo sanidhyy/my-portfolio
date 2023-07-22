@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 // Sub Components
 import PowerButton from "../subComponents/PowerButton";
+import LogoComponent from "../subComponents/LogoComponent";
 
 const MainContainer = styled.div`
   background: ${(props) => props.theme.body};
@@ -30,6 +31,7 @@ const Main = () => {
     <MainContainer>
       <Container>
         <PowerButton />
+        <LogoComponent />
       </Container>
     </MainContainer>
   );
