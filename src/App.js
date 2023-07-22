@@ -1,9 +1,12 @@
-function App() {
-  return <div>
-    App File
-    </div>
-    
-}
+import GlobalStyle from "./globalStyles";
 
-export default App
+const App = () => {
+  return (
+    <>
+      <GlobalStyle />
+      App File
+    </>
+  );
+};
 
+export default App;
