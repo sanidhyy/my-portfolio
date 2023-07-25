@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 import { Facebook, Github, Twitter, YouTube } from "../components/AllSvgs";
@@ -28,43 +27,47 @@ const SocialIcons = () => {
   return (
     <Icons>
       <div>
-        <NavLink
+        <a
+          href="https://github.com/Technical-Shubham-tech"
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://github.com/Technical-Shubham-tech" }}
+          rel="noreferrer noopener"
         >
           <Github width={25} height={25} fill="currentColor" />
-        </NavLink>
+        </a>
       </div>
 
       <div>
-        <NavLink
+        <a
+          href="https://twitter.com/TechnicalShubam"
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://twitter.com/TechnicalShubam" }}
+          rel="noreferrer noopener"
         >
           <Twitter width={25} height={25} fill="currentColor" />
-        </NavLink>
+        </a>
       </div>
 
       <div>
-        <NavLink
+        <a
+          href="https://facebook.com"
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://facebook.com" }}
+          rel="noreferrer noopener"
         >
           <Facebook width={25} height={25} fill="currentColor" />
-        </NavLink>
+        </a>
       </div>
 
       <div>
-        <NavLink
+        <a
+          href="https://youtube.com/@OPGAMER."
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://youtube.com/@OPGAMER." }}
+          rel="noreferrer noopener"
         >
           <YouTube width={25} height={25} fill="currentColor" />
-        </NavLink>
+        </a>
       </div>
 
       <Line />
