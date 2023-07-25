@@ -6,7 +6,7 @@ import { Navigate } from "react-router-dom";
 import GlobalStyle from "./globalStyles";
 
 // components
-import { lightTheme } from "./components/Themes";
+import { LightTheme } from "./components/Themes";
 import Main from "./components/Main";
 import AboutPage from "./components/AboutPage";
 import BlogPage from "./components/BlogPage";
@@ -18,7 +18,7 @@ const App = () => {
     <>
       <GlobalStyle />
 
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={LightTheme}>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/about" element={<AboutPage />} />

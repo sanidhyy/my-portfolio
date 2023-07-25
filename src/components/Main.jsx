@@ -59,7 +59,7 @@ const Blog = styled(NavLink)`
 `;
 
 const Work = styled(NavLink)`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 50%;
   left: calc(1rem + 2vw);
@@ -79,7 +79,7 @@ const BottomBar = styled.div`
 `;
 
 const About = styled(NavLink)`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   text-decoration: none;
   z-index: 1;
 `;
@@ -114,6 +114,18 @@ const Center = styled.button`
   }
 `;
 
+const DarkDiv = styled.div`
+  position: absolute;
+  top: 0;
+  background-color: #000;
+  bottom: 0;
+  right: 50%;
+  width: ${(props) => (props.click ? "50%" : "0")};
+  height: ${(props) => (props.click ? "100%" : "0")};
+  z-index: 1;
+  transition: height 0.5s ease, width 1s ease 0.5s;
+`;
+
 const Main = () => {
   const [click, setClick] = useState(false);
 
@@ -121,10 +133,12 @@ const Main = () => {
 
   return (
     <MainContainer>
+      <DarkDiv click={click} />
       <Container>
         <PowerButton />
-        <LogoComponent />
-        <SocialIcons />
+        <LogoComponent theme={click ? "dark" : "light"} />
+        <SocialIcons theme={click ? "dark" : "light"} />
+        <DarkDiv click={click} />
 
         <Center click={click}>
           <YinYang
@@ -148,12 +162,12 @@ const Main = () => {
           <h2>Blog</h2>
         </Blog>
 
-        <Work to="/work">
+        <Work to="/work" click={click}>
           <h2>Work</h2>
         </Work>
 
         <BottomBar>
-          <About to="/about">
+          <About to="/about" click={click}>
             <h2>About.</h2>
           </About>
           <Skills to="/skills">
