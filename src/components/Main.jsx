@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 
 // Sub Components
@@ -92,8 +92,8 @@ const Skills = styled(NavLink)`
 
 const Center = styled.button`
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: ${(props) => (props.click ? "85%" : "50%")};
+  left: ${(props) => (props.click ? "92%" : "50%")};
   transform: translate(-50%, -50%);
   border: none;
   outline: none;
@@ -102,17 +102,23 @@ const Center = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 1s ease;
 
   & > :first-child {
     animation: ${rotate} infinite 1.5s linear;
   }
 
   & > :last-child {
+    display: ${(props) => (props.click ? "none" : "inline-block")};
     padding-top: 1rem;
   }
 `;
 
 const Main = () => {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+
   return (
     <MainContainer>
       <Container>
@@ -120,8 +126,13 @@ const Main = () => {
         <LogoComponent />
         <SocialIcons />
 
-        <Center>
-          <YinYang width={200} height={200} fill="currentColor" />
+        <Center click={click}>
+          <YinYang
+            onClick={() => handleClick()}
+            width={click ? 120 : 200}
+            height={click ? 120 : 200}
+            fill="currentColor"
+          />
           <span>Click here</span>
         </Center>
 
