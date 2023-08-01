@@ -9,7 +9,7 @@ import GlobalStyle from "./globalStyles";
 // pages
 import { LightTheme } from "./pages/Themes";
 import Main from "./pages/Main";
-import AboutPage from "./pages/AboutPage";
+import AboutPage from "./pages/About";
 import BlogPage from "./pages/BlogPage";
 import WorkPage from "./pages/WorkPage";
 import MySkillsPage from "./pages/MySkillsPage";
