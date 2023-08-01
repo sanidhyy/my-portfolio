@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
 import LogoComponent from "../subComponents/LogoComponent";
@@ -10,7 +11,7 @@ import BlogComponent from "./BlogComponent";
 import AnchorComponent from "../subComponents/Anchor";
 import BigTitle from "../subComponents/BigTitle";
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
   background-image: url(${img});
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,6 +40,18 @@ const Grid = styled.div`
   grid-gap: calc(1rem + 2vw);
 `;
 
+// framer motion configuration
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5,
+    },
+  },
+};
+
 const BlogPage = () => {
   const [number, setNumber] = useState(0);
 
@@ -48,7 +61,15 @@ const BlogPage = () => {
   }, []);
 
   return (
-    <MainContainer>
+    <MainContainer
+      variants={container}
+      initial="hidden"
+      animate="show"
+      exit={{
+        opacity: 0,
+        transition: { duration: 0.5 },
+      }}
+    >
       <Container>
         <LogoComponent />
         <PowerButton />
@@ -57,9 +78,9 @@ const BlogPage = () => {
 
         <Center>
           <Grid>
-            {Blogs.map((blog) => {
-              return <BlogComponent key={blog.id} blog={blog} />;
-            })}
+            {Blogs.map((blog) => (
+              <BlogComponent key={blog.id} blog={blog} />
+            ))}
           </Grid>
         </Center>
 
