@@ -6,7 +6,7 @@ import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
-import { Blogs } from "../data/BlogData";
+import { blogData } from "../data";
 import BlogComponent from "./BlogComponent";
 import AnchorComponent from "../subComponents/Anchor";
 import BigTitle from "../subComponents/BigTitle";
@@ -78,7 +78,7 @@ const BlogPage = () => {
 
         <Center>
           <Grid>
-            {Blogs.map((blog) => (
+            {blogData.map((blog) => (
               <BlogComponent key={blog.id} blog={blog} />
             ))}
           </Grid>

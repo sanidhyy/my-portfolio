@@ -6,14 +6,14 @@ import { DarkTheme } from "./Themes";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
-import { Work } from "../data/WorkData";
+import { workData } from "../data";
 import Card from "../subComponents/Card";
 import { YinYang } from "./AllSvgs";
 import BigTitle from "../subComponents/BigTitle";
 
 const Main = styled.div`
   background-color: ${(props) => props.theme.body};
-  height: calc(45vh * ${Work.length});
+  height: calc(45vh * ${workData.length});
   position: relative;
   display: flex;
   align-items: center;
@@ -75,7 +75,7 @@ const WorkPage = () => {
         <PowerButton />
 
         <Box ref={mainRef} variants={container} initial="hidden" animate="show">
-          {Work.map((data) => (
+          {workData.map((data) => (
             <Card key={data.id} data={data} />
           ))}
         </Box>
