@@ -6,13 +6,13 @@ import { AnimatePresence } from "framer-motion";
 // global style
 import GlobalStyle from "./globalStyles";
 
-// components
-import { LightTheme } from "./components/Themes";
-import Main from "./components/Main";
-import AboutPage from "./components/AboutPage";
-import BlogPage from "./components/BlogPage";
-import WorkPage from "./components/WorkPage";
-import MySkillsPage from "./components/MySkillsPage";
+// pages
+import { LightTheme } from "./pages/Themes";
+import Main from "./pages/Main";
+import AboutPage from "./pages/AboutPage";
+import BlogPage from "./pages/BlogPage";
+import WorkPage from "./pages/WorkPage";
+import MySkillsPage from "./pages/MySkillsPage";
 import SoundBar from "./subComponents/SoundBar";
 
 const App = () => {

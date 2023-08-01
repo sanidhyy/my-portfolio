@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-import { PowerBtn } from "../components/AllSvgs";
+import { PowerBtn } from "../pages/AllSvgs";
 
 const Power = styled.button`
   position: fixed;

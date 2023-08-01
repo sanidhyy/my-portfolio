@@ -1,7 +1,7 @@
 // Contains social icons data
 // Don't remove anything from here (if not sure)
 
-import { Github, Linkedin, Twitter, YouTube } from "../components/AllSvgs";
+import { Github, Linkedin, Twitter, YouTube } from "../pages/AllSvgs";
 
 export const socialData = [
   {
