@@ -1,6 +1,7 @@
 import { ThemeProvider } from "styled-components";
 import { Routes, Route } from "react-router";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 // global style
 import GlobalStyle from "./globalStyles";
@@ -14,19 +15,23 @@ import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
 
 const App = () => {
+  const location = useLocation();
   return (
     <>
       <GlobalStyle />
 
       <ThemeProvider theme={LightTheme}>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/work" element={<WorkPage />} />
-          <Route path="/skills" element={<MySkillsPage />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+        {/* animations on page change */}
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Main />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/work" element={<WorkPage />} />
+            <Route path="/skills" element={<MySkillsPage />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </AnimatePresence>
       </ThemeProvider>
     </>
   );
