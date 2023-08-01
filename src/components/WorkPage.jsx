@@ -8,12 +8,14 @@ import PowerButton from "../subComponents/PowerButton";
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
 import { YinYang } from "./AllSvgs";
+import BigTitle from "../subComponents/BigTitle";
 
 const Main = styled.div`
   background-color: ${(props) => props.theme.body};
   height: calc(45vh * ${Work.length});
   position: relative;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
 `;
 
 const Box = styled.div`
@@ -73,6 +75,8 @@ const WorkPage = () => {
             fill={DarkTheme.text}
           />
         </Rotate>
+
+        <BigTitle text="WORK" top="10%" right="20%" />
       </Main>
     </ThemeProvider>
   );
