@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 import { Github } from "../components/AllSvgs";
 
-const Box = styled.div`
+const Box = styled(motion.li)`
   width: 16rem;
   height: 40vh;
   background-color: ${(props) => props.theme.text};
@@ -79,11 +81,25 @@ const Git = styled.a`
   }
 `;
 
+// framer motion configuration
+const item = {
+  hidden: {
+    scale: 0,
+  },
+  show: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      duration: 0.5,
+    },
+  },
+};
+
 const Card = ({ data }) => {
   const { name, description, tags, demo, github } = data;
 
   return (
-    <Box>
+    <Box variants={item}>
       <Title>{name}</Title>
       <Description>{description}</Description>
       <Tags>
