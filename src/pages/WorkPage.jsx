@@ -3,13 +3,13 @@ import styled, { ThemeProvider } from "styled-components";
 import { motion } from "framer-motion";
 
 import { DarkTheme } from "./Themes";
-import LogoComponent from "../subComponents/LogoComponent";
-import SocialIcons from "../subComponents/SocialIcons";
-import PowerButton from "../subComponents/PowerButton";
+import LogoComponent from "../components/LogoComponent";
+import SocialIcons from "../components/SocialIcons";
+import PowerButton from "../components/PowerButton";
 import { workData } from "../data";
-import Card from "../subComponents/Card";
+import Card from "../components/Card";
 import { YinYang } from "./AllSvgs";
-import BigTitle from "../subComponents/BigTitle";
+import BigTitle from "../components/BigTitle";
 
 const Main = styled.div`
   background-color: ${(props) => props.theme.body};

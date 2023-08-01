@@ -13,7 +13,9 @@ import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
 import WorkPage from "./pages/WorkPage";
 import MySkillsPage from "./pages/MySkillsPage";
-import SoundBar from "./subComponents/SoundBar";
+
+// components
+import SoundBar from "./components/SoundBar";
 
 const App = () => {
   const location = useLocation();

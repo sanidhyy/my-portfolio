@@ -2,12 +2,12 @@ import React from "react";
 import styled, { ThemeProvider, keyframes } from "styled-components";
 
 import { DarkTheme } from "./Themes";
-import LogoComponent from "../subComponents/LogoComponent";
-import SocialIcons from "../subComponents/SocialIcons";
-import PowerButton from "../subComponents/PowerButton";
-import Particle from "../subComponents/Particle";
+import LogoComponent from "../components/LogoComponent";
+import SocialIcons from "../components/SocialIcons";
+import PowerButton from "../components/PowerButton";
+import Particle from "../components/Particle";
 import astronaut from "../assets/Images/spaceman.png";
-import BigTitle from "../subComponents/BigTitle";
+import BigTitle from "../components/BigTitle";
 
 const Main = styled.div`
   background-color: ${(props) => props.theme.body};

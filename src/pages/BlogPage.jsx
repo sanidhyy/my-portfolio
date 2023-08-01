@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
-import LogoComponent from "../subComponents/LogoComponent";
-import PowerButton from "../subComponents/PowerButton";
-import SocialIcons from "../subComponents/SocialIcons";
+import LogoComponent from "../components/LogoComponent";
+import PowerButton from "../components/PowerButton";
+import SocialIcons from "../components/SocialIcons";
 import { blogData } from "../data";
 import BlogComponent from "./BlogComponent";
-import AnchorComponent from "../subComponents/Anchor";
-import BigTitle from "../subComponents/BigTitle";
+import AnchorComponent from "../components/Anchor";
+import BigTitle from "../components/BigTitle";
 
 const MainContainer = styled(motion.div)`
   background-image: url(${img});

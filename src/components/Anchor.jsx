@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import { Anchor, Link } from "../components/AllSvgs";
+import { Anchor, Link } from "../pages/AllSvgs";
 
 const Container = styled.div`
   position: relative;

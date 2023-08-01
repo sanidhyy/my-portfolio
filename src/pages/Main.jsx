@@ -3,9 +3,9 @@ import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 
 // Sub Components
-import PowerButton from "../subComponents/PowerButton";
-import LogoComponent from "../subComponents/LogoComponent";
-import SocialIcons from "../subComponents/SocialIcons";
+import PowerButton from "../components/PowerButton";
+import LogoComponent from "../components/LogoComponent";
+import SocialIcons from "../components/SocialIcons";
 import { NavLink } from "react-router-dom";
 import { YinYang } from "./AllSvgs";
 import Intro from "./Intro";
