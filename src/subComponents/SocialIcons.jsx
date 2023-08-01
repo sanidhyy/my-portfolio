@@ -31,6 +31,8 @@ const SocialIcon = ({ id, name, Icon, link, theme }) => (
     initial={{ transform: "scale(0)" }}
     animate={{ transform: "scale(1)", scale: [0, 1, 1.5, 1] }}
     transition={{ type: "spring", duration: 1, delay: 1 + 0.2 * id }}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
   >
     <a
       href={link}
