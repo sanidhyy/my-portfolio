@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { Facebook, Github, Twitter, YouTube } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
+import { socialData } from "../data";
 
 const Icons = styled.div`
   display: flex;
@@ -26,84 +26,35 @@ const Line = styled(motion.span)`
     props.color === "dark" ? DarkTheme.text : DarkTheme.body};
 `;
 
+const SocialIcon = ({ key, name, Icon, link, theme }) => (
+  <motion.div
+    key={key}
+    initial={{ transform: "scale(0)" }}
+    animate={{ transform: "scale(1)", scale: [0, 1, 1.5, 1] }}
+    transition={{ type: "spring", duration: 1, delay: 1 + 0.2 * key }}
+  >
+    <a
+      href={link}
+      style={{ color: "inherit" }}
+      title={name}
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      <Icon
+        width={25}
+        height={25}
+        fill={theme === "dark" ? DarkTheme.text : DarkTheme.body}
+      />
+    </a>
+  </motion.div>
+);
+
 const SocialIcons = ({ theme }) => {
   return (
     <Icons>
-      <motion.div
-        initial={{ transform: "scale(0)" }}
-        animate={{ transform: "scale(1)", scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1 }}
-      >
-        <a
-          href="https://github.com/Technical-Shubham-tech"
-          style={{ color: "inherit" }}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Github
-            width={25}
-            height={25}
-            fill={theme === "dark" ? DarkTheme.text : DarkTheme.body}
-          />
-        </a>
-      </motion.div>
-
-      <motion.div
-        initial={{ transform: "scale(0)" }}
-        animate={{ transform: "scale(1)", scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1.2 }}
-      >
-        <a
-          href="https://twitter.com/TechnicalShubam"
-          style={{ color: "inherit" }}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Twitter
-            width={25}
-            height={25}
-            fill={theme === "dark" ? DarkTheme.text : DarkTheme.body}
-          />
-        </a>
-      </motion.div>
-
-      <motion.div
-        initial={{ transform: "scale(0)" }}
-        animate={{ transform: "scale(1)", scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1.4 }}
-      >
-        <a
-          href="https://facebook.com"
-          style={{ color: "inherit" }}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Facebook
-            width={25}
-            height={25}
-            fill={theme === "dark" ? DarkTheme.text : DarkTheme.body}
-          />
-        </a>
-      </motion.div>
-
-      <motion.div
-        initial={{ transform: "scale(0)" }}
-        animate={{ transform: "scale(1)", scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1.6 }}
-      >
-        <a
-          href="https://youtube.com/@OPGAMER."
-          style={{ color: "inherit" }}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <YouTube
-            width={25}
-            height={25}
-            fill={theme === "dark" ? DarkTheme.text : DarkTheme.body}
-          />
-        </a>
-      </motion.div>
+      {socialData.map((data, i) => (
+        <SocialIcon {...data} key={i} theme={theme} />
+      ))}
 
       <Line
         color={theme}
