@@ -3,12 +3,9 @@ import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 
 // Sub Components
-import PowerButton from "../components/PowerButton";
-import LogoComponent from "../components/LogoComponent";
-import SocialIcons from "../components/SocialIcons";
 import { NavLink } from "react-router-dom";
 import { YinYang } from "../assets/images";
-import Intro from "../components/Intro";
+import { PowerButton, Logo, SocialIcons, Intro } from "../components";
 
 const rotate = keyframes`
   from{
@@ -138,7 +135,7 @@ const Main = () => {
       <DarkDiv click={click} />
       <Container>
         <PowerButton />
-        <LogoComponent theme={click ? "dark" : "light"} />
+        <Logo theme={click ? "dark" : "light"} />
         <SocialIcons theme={click ? "dark" : "light"} />
         <DarkDiv click={click} />
 

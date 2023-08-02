@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { DarkTheme } from "../config/Themes";
+import { DarkTheme } from "../config/themes";
 
-const Logo = styled.h1`
+const LogoContainer = styled.h1`
   display: inline-block;
   color: ${(props) =>
     props.color === "dark" ? DarkTheme.text : DarkTheme.body};
@@ -13,8 +13,8 @@ const Logo = styled.h1`
   z-index: 3;
 `;
 
-const LogoComponent = ({ theme }) => {
-  return <Logo color={theme}>CB</Logo>;
+const Logo = ({ theme }) => {
+  return <LogoContainer color={theme}>CB</LogoContainer>;
 };
 
-export default LogoComponent;
+export default Logo;

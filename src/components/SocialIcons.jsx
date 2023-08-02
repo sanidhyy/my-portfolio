@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { DarkTheme } from "../config/Themes";
+import { DarkTheme } from "../config/themes";
 import { socialData } from "../data";
 
 const Icons = styled.div`

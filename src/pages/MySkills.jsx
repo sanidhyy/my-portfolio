@@ -1,12 +1,14 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { LightTheme } from "../config/Themes";
+import { LightTheme } from "../config/themes";
 import { Design, Develope } from "../assets/images";
-import LogoComponent from "../components/LogoComponent";
-import SocialIcons from "../components/SocialIcons";
-import PowerButton from "../components/PowerButton";
-import Particle from "../components/Particle";
-import BigTitle from "../components/BigTitle";
+import {
+  Logo,
+  SocialIcons,
+  PowerButton,
+  Particle,
+  BigTitle,
+} from "../components";
 
 const Main = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -80,7 +82,7 @@ const MySkillsPage = () => {
   return (
     <ThemeProvider theme={LightTheme}>
       <Main>
-        <LogoComponent theme="light" />
+        <Logo theme="light" />
         <SocialIcons theme="light" />
         <PowerButton />
         <Particle theme="light" />

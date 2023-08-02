@@ -3,13 +3,15 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 import { blogBg } from "../assets/images";
-import LogoComponent from "../components/LogoComponent";
-import PowerButton from "../components/PowerButton";
-import SocialIcons from "../components/SocialIcons";
 import { blogData } from "../data";
-import BlogComponent from "../components/BlogSingle";
-import AnchorComponent from "../components/Anchor";
-import BigTitle from "../components/BigTitle";
+import {
+  Logo,
+  PowerButton,
+  SocialIcons,
+  BlogSingle,
+  Anchor,
+  BigTitle,
+} from "../components";
 
 const MainContainer = styled(motion.div)`
   background-image: url(${blogBg});
@@ -71,15 +73,15 @@ const BlogPage = () => {
       }}
     >
       <Container>
-        <LogoComponent />
+        <Logo />
         <PowerButton />
         <SocialIcons />
-        <AnchorComponent number={number} />
+        <Anchor number={number} />
 
         <Center>
           <Grid>
             {blogData.map((blog) => (
-              <BlogComponent key={blog.id} blog={blog} />
+              <BlogSingle key={blog.id} blog={blog} />
             ))}
           </Grid>
         </Center>

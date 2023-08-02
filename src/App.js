@@ -7,7 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import GlobalStyle from "./globalStyles";
 
 // pages
-import { LightTheme } from "./config/Themes";
+import { LightTheme } from "./config/themes";
 import Main from "./pages/Main";
 import AboutPage from "./pages/About";
 import BlogPage from "./pages/Blog";

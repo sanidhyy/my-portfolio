@@ -2,14 +2,10 @@ import React, { useEffect, useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { motion } from "framer-motion";
 
-import { DarkTheme } from "../config/Themes";
-import LogoComponent from "../components/LogoComponent";
-import SocialIcons from "../components/SocialIcons";
-import PowerButton from "../components/PowerButton";
+import { DarkTheme } from "../config/themes";
 import { workData } from "../data";
-import Card from "../components/Card";
 import { YinYang } from "../assets/images";
-import BigTitle from "../components/BigTitle";
+import { Logo, SocialIcons, PowerButton, Card, BigTitle } from "../components";
 
 const Main = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -70,7 +66,7 @@ const WorkPage = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
       <Main>
-        <LogoComponent theme="dark" />
+        <Logo theme="dark" />
         <SocialIcons theme="dark" />
         <PowerButton />
 
