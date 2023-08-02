@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { DarkTheme } from "../config/themes";
-import { SHORTNAME } from "../data";
+import { NAME, SHORTNAME } from "../data";
 
 const LogoContainer = styled.h1`
   display: inline-block;
@@ -13,10 +13,16 @@ const LogoContainer = styled.h1`
   left: 2rem;
   top: 2rem;
   z-index: 3;
+  cursor: default;
+  user-select: none;
 `;
 
 const Logo = ({ theme }) => {
-  return <LogoContainer color={theme}>{SHORTNAME}</LogoContainer>;
+  return (
+    <LogoContainer color={theme} title={`${NAME}'s Portfolio`}>
+      {SHORTNAME}
+    </LogoContainer>
+  );
 };
 
 export default Logo;

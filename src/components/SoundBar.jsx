@@ -76,7 +76,7 @@ const SoundBar = () => {
   }
 
   return (
-    <Box onClick={() => handleClick()}>
+    <Box onClick={() => handleClick()} title="Play Music">
       {lines}
 
       <audio src={music} ref={musicRef} loop></audio>

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { YinYang } from "../assets/images";
 import { PowerButton, Logo, SocialIcons, Intro } from "../components";
+import { EMAIL } from "../data";
 
 const rotate = keyframes`
   from{
@@ -139,7 +140,7 @@ const Main = () => {
         <SocialIcons theme={click ? "dark" : "light"} />
         <DarkDiv click={click} />
 
-        <Center click={click}>
+        <Center click={click} title="Click here">
           <YinYang
             onClick={() => handleClick()}
             width={click ? 120 : 200}
@@ -150,7 +151,7 @@ const Main = () => {
         </Center>
 
         <Contact
-          href="mailto:sanidhya.verma12345@gmail.com"
+          href={`mailto:${EMAIL}`}
           target="_blank"
           rel="noreferrer noopener"
         >
@@ -165,6 +166,7 @@ const Main = () => {
             }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            title="Contact"
           >
             Say hi..
           </motion.h3>
@@ -182,6 +184,7 @@ const Main = () => {
             }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            title="Blog"
           >
             Blog
           </motion.h2>
@@ -199,6 +202,7 @@ const Main = () => {
             }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            title="My Work"
           >
             Work
           </motion.h2>
@@ -217,6 +221,7 @@ const Main = () => {
               }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              title="About Me"
             >
               About.
             </motion.h2>
@@ -233,6 +238,7 @@ const Main = () => {
               }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              title="My Skills"
             >
               My Skills.
             </motion.h2>
