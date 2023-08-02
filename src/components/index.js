@@ -4,7 +4,7 @@
 export { default as Anchor } from "./Anchor";
 export { default as BigTitle } from "./BigTitle";
 export { default as BlogSingle } from "./BlogSingle";
-export { default as Card } from "./Card";
+export { default as WorkSingle } from "./WorkSingle";
 export { default as Intro } from "./Intro";
 export { default as Logo } from "./Logo";
 export { default as Particle } from "./Particle";

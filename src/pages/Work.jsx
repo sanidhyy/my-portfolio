@@ -5,7 +5,13 @@ import { motion } from "framer-motion";
 import { DarkTheme } from "../config/themes";
 import { workData } from "../data";
 import { YinYang } from "../assets/images";
-import { Logo, SocialIcons, PowerButton, Card, BigTitle } from "../components";
+import {
+  Logo,
+  SocialIcons,
+  PowerButton,
+  WorkSingle,
+  BigTitle,
+} from "../components";
 
 const Main = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -72,7 +78,7 @@ const WorkPage = () => {
 
         <Box ref={mainRef} variants={container} initial="hidden" animate="show">
           {workData.map((data) => (
-            <Card key={data.id} data={data} />
+            <WorkSingle key={data.id} data={data} />
           ))}
         </Box>
 

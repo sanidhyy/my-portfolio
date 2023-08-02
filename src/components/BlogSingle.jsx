@@ -1,11 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const Container = styled(motion.div)``;
+const Container = styled(motion.article)``;
 
-const Box = styled(motion(NavLink))`
+const Box = styled(motion.a)`
   width: calc(10rem + 15vw);
   text-decoration: none;
   height: 20rem;
@@ -83,7 +82,7 @@ const BlogComponent = ({ blog }) => {
 
   return (
     <Container variants={item}>
-      <Box to={{ pathname: link }}>
+      <Box href={link} target="_blank" rel="noreferrer noopener">
         <Image img={imgSrc} />
         <Title>{name}</Title>
         <HashTags>

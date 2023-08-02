@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { Github } from "../assets/images";
 
-const Box = styled(motion.li)`
+const Box = styled(motion.article)`
   width: 16rem;
   height: 40vh;
   background-color: ${(props) => props.theme.text};
@@ -51,7 +51,7 @@ const Tag = styled.span`
   font-size: calc(0.8rem + 0.3vw);
 `;
 
-const Footer = styled.footer`
+const Footer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
@@ -95,7 +95,7 @@ const item = {
   },
 };
 
-const Card = ({ data }) => {
+const WorkSingle = ({ data }) => {
   const { name, description, tags, demo, github } = data;
 
   return (
@@ -109,10 +109,20 @@ const Card = ({ data }) => {
       </Tags>
 
       <Footer>
-        <Link href={demo} target="_blank" rel="noreferrer noopener">
+        <Link
+          href={demo}
+          target="_blank"
+          rel="noreferrer noopener"
+          title="Site"
+        >
           Visit
         </Link>
-        <Git href={github} target="_blank" rel="noreferrer noopener">
+        <Git
+          href={github}
+          target="_blank"
+          rel="noreferrer noopener"
+          title="Source Code"
+        >
           <Github width={30} height={30} />
         </Git>
       </Footer>
@@ -120,4 +130,4 @@ const Card = ({ data }) => {
   );
 };
 
-export default Card;
+export default WorkSingle;
