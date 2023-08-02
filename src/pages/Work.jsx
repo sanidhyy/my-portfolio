@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { motion } from "framer-motion";
 
-import { DarkTheme } from "./Themes";
+import { DarkTheme } from "../config/Themes";
 import LogoComponent from "../components/LogoComponent";
 import SocialIcons from "../components/SocialIcons";
 import PowerButton from "../components/PowerButton";

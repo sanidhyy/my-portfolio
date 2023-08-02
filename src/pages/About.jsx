@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider, keyframes } from "styled-components";
 
-import { DarkTheme } from "./Themes";
+import { DarkTheme } from "../config/Themes";
 import LogoComponent from "../components/LogoComponent";
 import SocialIcons from "../components/SocialIcons";
 import PowerButton from "../components/PowerButton";

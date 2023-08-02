@@ -7,12 +7,12 @@ import { AnimatePresence } from "framer-motion";
 import GlobalStyle from "./globalStyles";
 
 // pages
-import { LightTheme } from "./pages/Themes";
+import { LightTheme } from "./config/Themes";
 import Main from "./pages/Main";
 import AboutPage from "./pages/About";
-import BlogPage from "./pages/BlogPage";
-import WorkPage from "./pages/WorkPage";
-import MySkillsPage from "./pages/MySkillsPage";
+import BlogPage from "./pages/Blog";
+import WorkPage from "./pages/Work";
+import MySkillsPage from "./pages/MySkills";
 
 // components
 import SoundBar from "./components/SoundBar";

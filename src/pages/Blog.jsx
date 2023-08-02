@@ -7,7 +7,7 @@ import LogoComponent from "../components/LogoComponent";
 import PowerButton from "../components/PowerButton";
 import SocialIcons from "../components/SocialIcons";
 import { blogData } from "../data";
-import BlogComponent from "./BlogComponent";
+import BlogComponent from "../components/BlogSingle";
 import AnchorComponent from "../components/Anchor";
 import BigTitle from "../components/BigTitle";
 

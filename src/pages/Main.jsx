@@ -8,7 +8,7 @@ import LogoComponent from "../components/LogoComponent";
 import SocialIcons from "../components/SocialIcons";
 import { NavLink } from "react-router-dom";
 import { YinYang } from "./AllSvgs";
-import Intro from "./Intro";
+import Intro from "../components/Intro";
 
 const rotate = keyframes`
   from{
