@@ -77,8 +77,8 @@ const WorkPage = () => {
         <PowerButton />
 
         <Box ref={mainRef} variants={container} initial="hidden" animate="show">
-          {workData.map((data) => (
-            <WorkSingle key={data.id} data={data} />
+          {workData.map((data, i) => (
+            <WorkSingle key={`work-${i + 1}`} data={data} />
           ))}
         </Box>
 

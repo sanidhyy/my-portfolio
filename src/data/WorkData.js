@@ -1,62 +1,56 @@
 export const workData = [
   {
-    id: 1,
-    name: "Agency Landing Page",
+    name: "Disney+ Clone",
     description:
-      "It is build on top of the React JS, with styledComponents and GSAP for smooth scrolling animations.",
-    tags: ["react", "gsap", "styledComponents"],
+      "Disney+ is one of the biggest streaming platforms used by millions of people world-wide and allows us to stream high quality content in 4k and various other formats.",
+    tags: ["react", "firebase", "css"],
 
-    demo: "https://agency-website-eta.vercel.app/",
-    github: "https://github.com/codebucks27/Agency-website",
+    demo: "https://clonedisneyplus.web.app/",
+    github: "https://github.com/Technical-Shubham-tech/disney-clone",
   },
   {
-    id: 2,
-    name: "Job listing website",
+    name: "Golds Gym",
     description:
-      "A Job listing website build in ReactJS. With searching and filtering functionalities.",
-    tags: ["react", "sass"],
+      "Web application that enables users to search for fitness exercises, effective personalized positions, and recommends new exercises based on their personal preferences.",
+    tags: ["react", "rapidapi", "tailwindcss"],
 
-    demo: "http://react-job-listing-website.codebucks27.vercel.app/",
-    github: "https://github.com/codebucks27/react-job-listing-website",
+    demo: "https://fitness-gym-react.netlify.app/",
+    github: "https://github.com/Technical-Shubham-tech/fitness-app",
   },
   {
-    id: 3,
-    name: "Dev.to Clone",
+    name: "Shoppy",
     description:
-      "A clone of Dev.to build using ReactJS. With realtime fetching of articles from dev.to using API.",
-    tags: ["react", "api", "sass"],
+      "The most personalised admin dashboard web application that allows enables users to choose customized themes and dark mode with different pages and variety of charts.",
+    tags: ["react", "syncfusion", "scss"],
 
-    demo: "http://devto-clone-codebucks27.vercel.app/",
-    github: "https://github.com/codebucks27/devto-clone",
+    demo: "https://shoppy-dashboard-react.netlify.app/",
+    github: "https://github.com/Technical-Shubham-tech/admin-dashboard",
   },
   {
-    id: 4,
-    name: "Sidebar Menu",
+    name: "TikTok Clone",
     description:
-      "A cool looking sidebar menu build using ReactJS and styledComponents.It has really smooth animations.",
-    tags: ["react", "styledComponents", "react-router"],
+      "A Next JS Web Application that enables users to upload videos of any length and size, create accounts and connect with other people just like any other social media.",
+    tags: ["nextjs", "nodejs", "tailwindcss"],
 
-    demo: "https://react-sidebar.vercel.app/",
-    github: "https://github.com/codebucks27/react-sidebar",
+    demo: "https://tiktok-clone-react.vercel.app/",
+    github: "https://github.com/Technical-Shubham-tech/tiktok-clone",
   },
   {
-    id: 5,
-    name: "Todo App(React + Redux)",
+    name: "Cryptoverse",
     description:
-      "A todo app build using Redux-toolkit and framer-motion for smooth animations.",
-    tags: ["react", "redux", "framer-motion"],
+      "Best Cryptocurrency web application that allows users to view price, market cap and daily change in realtime for almost every cryptocurrency in the world.",
+    tags: ["react", "rapidapi", "css"],
 
-    demo: "http://react-redux-todo-app-git-main-codebucks27.vercel.app/",
-    github: "https://github.com/codebucks27/React-Redux-Todo-App",
+    demo: "https://reactjscryptoapp.netlify.app/",
+    github: "https://github.com/Technical-Shubham-tech/crypto-app",
   },
   {
-    id: 6,
-    name: "Responsive Navigation Menu",
+    name: "Travel Advisor",
     description:
-      "A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
-    tags: ["react", "react-router", "css"],
+      "Web application that enables you to view your nearby restaurants, hotels and attractions which can be sorted by ratings, price and much more.",
+    tags: ["react", "rapidapi", "material-ui"],
 
-    demo: "http://react-responsive-navbar-codebucks27.vercel.app/",
-    github: "https://github.com/codebucks27/React-responsive-navbar",
+    demo: "https://travel-advisor-reactjs.netlify.app/",
+    github: "https://github.com/Technical-Shubham-tech/travel-advisor",
   },
 ];

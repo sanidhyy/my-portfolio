@@ -104,7 +104,7 @@ const WorkSingle = ({ data }) => {
       <Description>{description}</Description>
       <Tags>
         {tags.map((tag, id) => (
-          <Tag key={id}>#{tag}</Tag>
+          <Tag key={`Tag ${id}`}>#{tag}</Tag>
         ))}
       </Tags>
 
