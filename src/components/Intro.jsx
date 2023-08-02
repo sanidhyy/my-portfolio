@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 import { profileImg } from "../assets/images";
+import { NAME } from "../data";
 
 const Box = styled(motion.div)`
   position: absolute;
@@ -72,7 +73,7 @@ const Intro = () => {
       <SubBox>
         <Text>
           <h1>Hi,</h1>
-          <h3>I'm Shubham.</h3>
+          <h3>I'm {NAME}.</h3>
           <h3>I design and code simple yet beautiful websites.</h3>
         </Text>
       </SubBox>

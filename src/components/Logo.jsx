@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+
 import { DarkTheme } from "../config/themes";
+import { SHORTNAME } from "../data";
 
 const LogoContainer = styled.h1`
   display: inline-block;
@@ -14,7 +16,7 @@ const LogoContainer = styled.h1`
 `;
 
 const Logo = ({ theme }) => {
-  return <LogoContainer color={theme}>CB</LogoContainer>;
+  return <LogoContainer color={theme}>{SHORTNAME}</LogoContainer>;
 };
 
 export default Logo;
