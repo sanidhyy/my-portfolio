@@ -8,11 +8,7 @@ import GlobalStyle from "./globalStyles";
 
 // pages
 import { LightTheme } from "./config/themes";
-import Main from "./pages/Main";
-import AboutPage from "./pages/About";
-import BlogPage from "./pages/Blog";
-import WorkPage from "./pages/Work";
-import MySkillsPage from "./pages/MySkills";
+import { Main, About, Blog, Work, MySkills } from "./pages";
 
 // components
 import SoundBar from "./components/SoundBar";
@@ -29,10 +25,10 @@ const App = () => {
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Main />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/work" element={<WorkPage />} />
-            <Route path="/skills" element={<MySkillsPage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/skills" element={<MySkills />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </AnimatePresence>
