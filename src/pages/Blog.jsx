@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
+import { blogBg } from "../assets/images";
 import LogoComponent from "../components/LogoComponent";
 import PowerButton from "../components/PowerButton";
 import SocialIcons from "../components/SocialIcons";
@@ -12,7 +12,7 @@ import AnchorComponent from "../components/Anchor";
 import BigTitle from "../components/BigTitle";
 
 const MainContainer = styled(motion.div)`
-  background-image: url(${img});
+  background-image: url(${blogBg});
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

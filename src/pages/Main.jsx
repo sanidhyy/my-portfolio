@@ -7,7 +7,7 @@ import PowerButton from "../components/PowerButton";
 import LogoComponent from "../components/LogoComponent";
 import SocialIcons from "../components/SocialIcons";
 import { NavLink } from "react-router-dom";
-import { YinYang } from "./AllSvgs";
+import { YinYang } from "../assets/images";
 import Intro from "../components/Intro";
 
 const rotate = keyframes`

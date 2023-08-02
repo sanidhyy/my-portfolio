@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { LightTheme } from "../config/Themes";
-import { Design, Develope } from "./AllSvgs";
+import { Design, Develope } from "../assets/images";
 import LogoComponent from "../components/LogoComponent";
 import SocialIcons from "../components/SocialIcons";
 import PowerButton from "../components/PowerButton";

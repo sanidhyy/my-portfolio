@@ -8,7 +8,7 @@ import SocialIcons from "../components/SocialIcons";
 import PowerButton from "../components/PowerButton";
 import { workData } from "../data";
 import Card from "../components/Card";
-import { YinYang } from "./AllSvgs";
+import { YinYang } from "../assets/images";
 import BigTitle from "../components/BigTitle";
 
 const Main = styled.div`

@@ -6,7 +6,7 @@ import LogoComponent from "../components/LogoComponent";
 import SocialIcons from "../components/SocialIcons";
 import PowerButton from "../components/PowerButton";
 import Particle from "../components/Particle";
-import astronaut from "../assets/Images/spaceman.png";
+import { spaceman } from "../assets/images";
 import BigTitle from "../components/BigTitle";
 
 const Main = styled.div`
@@ -66,7 +66,7 @@ const AboutPage = () => {
         <Particle theme="dark" />
 
         <Spaceman>
-          <img src={astronaut} alt="spaceman" />
+          <img src={spaceman} alt="spaceman" />
         </Spaceman>
         <Box>
           I'm a front-end developer located in India. I love to create simple

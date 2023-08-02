@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import me from "../assets/Images/profile-img.png";
+import { profileImg } from "../assets/images";
 
 const Box = styled(motion.div)`
   position: absolute;
@@ -83,7 +83,7 @@ const Intro = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2 }}
         >
-          <img className="profile-img" src={me} alt="Profile" />
+          <img className="profile-img" src={profileImg} alt="Profile" />
         </motion.div>
       </SubBox>
     </Box>
