@@ -1,11 +1,13 @@
-import blog1 from "../assets/images/blog/blog-1.webp";
-import blog2 from "../assets/images/blog/blog-2.webp";
-import blog3 from "../assets/images/blog/blog-3.webp";
-import blog4 from "../assets/images/blog/blog-4.webp";
-import blog5 from "../assets/images/blog/blog-5.webp";
-import blog6 from "../assets/images/blog/blog-6.webp";
-import blog7 from "../assets/images/blog/blog-7.webp";
-import blog8 from "../assets/images/blog/blog-8.webp";
+import {
+  blog1,
+  blog2,
+  blog3,
+  blog4,
+  blog5,
+  blog6,
+  blog7,
+  blog8,
+} from "../assets/images";
 
 export const blogData = [
   {

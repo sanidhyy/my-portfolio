@@ -1,6 +1,6 @@
 {
   "name": "my-portfolio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "author": "Sanidhya Kr. Verma",
   "description": "Modern Portfolio using React JS and Framer Motion",

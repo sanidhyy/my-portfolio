@@ -9,13 +9,19 @@ import { LightTheme } from "./config/themes";
 // components
 import { SoundBar, AnimatedRoutes } from "./components";
 
+// App
 const App = () => {
   return (
     <>
+      {/* Global Style */}
       <GlobalStyle />
 
+      {/* Theme Provider */}
       <ThemeProvider theme={LightTheme}>
+        {/* Sound Bar */}
         <SoundBar />
+
+        {/* Animated Routes */}
         <AnimatedRoutes />
       </ThemeProvider>
     </>

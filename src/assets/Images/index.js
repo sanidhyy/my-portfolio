@@ -6,6 +6,16 @@ export { default as blogBg } from "./blog-bg.webp";
 export { default as profileImg } from "./profile-img.webp";
 export { default as spaceman } from "./spaceman.webp";
 
+// exporting all blog images
+export { default as blog1 } from "./blog/blog-1.webp";
+export { default as blog2 } from "./blog/blog-2.webp";
+export { default as blog3 } from "./blog/blog-3.webp";
+export { default as blog4 } from "./blog/blog-4.webp";
+export { default as blog5 } from "./blog/blog-5.webp";
+export { default as blog6 } from "./blog/blog-6.webp";
+export { default as blog7 } from "./blog/blog-7.webp";
+export { default as blog8 } from "./blog/blog-8.webp";
+
 // exporting all svgs as react component
 
 // Power Button
@@ -126,7 +136,7 @@ export const YinYang = (props) => {
 };
 
 // Anchor
-export const Anchor = (props) => {
+export const AnchorImg = (props) => {
   return (
     <svg
       aria-hidden="true"
