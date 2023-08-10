@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { LightTheme } from "../config/themes";
 import { Design, Develope } from "../assets/images";
 import { Particle, BigTitle, Wrapper } from "../components";
+import useDocumentTitle from "../useDocumentTitle";
+import { NAME } from "../data";
 
 // Main styles
 const Main = styled(motion.main)`
@@ -81,6 +83,8 @@ const Description = styled.div`
 
 // My Skills Page
 const MySkills = () => {
+  // change page title
+  useDocumentTitle(`${NAME} | My Skills`);
   return (
     // theme provider
     <ThemeProvider theme={LightTheme}>

@@ -3,9 +3,10 @@ import styled, { ThemeProvider } from "styled-components";
 import { motion } from "framer-motion";
 
 import { DarkTheme } from "../config/themes";
-import { workData } from "../data";
+import { NAME, workData } from "../data";
 import { YinYang } from "../assets/images";
 import { WorkSingle, BigTitle, Wrapper } from "../components";
+import useDocumentTitle from "../useDocumentTitle";
 
 // Main styles
 const Main = styled(motion.main)`
@@ -51,6 +52,9 @@ const container = {
 
 // Work Page
 const Work = () => {
+  // change page title
+  useDocumentTitle(`${NAME} | My Work`);
+
   // main and yinyang ref
   const mainRef = useRef(null);
   const yinYangRef = useRef(null);

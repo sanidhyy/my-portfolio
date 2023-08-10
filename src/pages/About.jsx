@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { DarkTheme } from "../config/themes";
 import { spaceman } from "../assets/images";
 import { Particle, BigTitle, Wrapper } from "../components";
+import useDocumentTitle from "../useDocumentTitle";
+import { NAME } from "../data";
 
 // Main styles
 const Main = styled(motion.main)`
@@ -60,6 +62,9 @@ const Box = styled.div`
 
 // About
 const About = () => {
+  // change page title
+  useDocumentTitle(`${NAME} | About Me`);
+
   return (
     // theme provider
     <ThemeProvider theme={DarkTheme}>

@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 import { blogBg } from "../assets/images";
-import { blogData } from "../data";
+import { NAME, blogData } from "../data";
 import { BlogSingle, Anchor, BigTitle, Wrapper } from "../components";
+import useDocumentTitle from "../useDocumentTitle";
 
 // Main container styles
 const MainContainer = styled(motion.main)`
@@ -53,6 +54,9 @@ const container = {
 
 // Blog Page
 const Blog = () => {
+  // change page title
+  useDocumentTitle(`${NAME} | My Blog`);
+
   const [number, setNumber] = useState(0);
 
   // difference of anchor height & window height
