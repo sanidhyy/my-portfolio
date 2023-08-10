@@ -1,75 +1,68 @@
+import blog1 from "../assets/images/blog/blog-1.webp";
+import blog2 from "../assets/images/blog/blog-2.webp";
+import blog3 from "../assets/images/blog/blog-3.webp";
+import blog4 from "../assets/images/blog/blog-4.webp";
+import blog5 from "../assets/images/blog/blog-5.webp";
+import blog6 from "../assets/images/blog/blog-6.webp";
+import blog7 from "../assets/images/blog/blog-7.webp";
+import blog8 from "../assets/images/blog/blog-8.webp";
+
 export const blogData = [
   {
-    id: 1,
-    name: "Build Website with ReactJS, Styled-components and GSAP for Scrolling Animations",
-    tags: ["react", "gsap", "styled-components"],
+    name: "Build a real-time voting app with WebSockets, React & TypeScript 🔌⚡️",
+    tags: ["websocket", "typescript", "fullstack"],
     date: "13 May, 2021",
-    imgSrc:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--sBeV06Xc--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2yrzy75q4dzibqz6rf82.png",
-    link: "https://dev.to/codebucks/build-website-with-reactjs-styled-components-and-gsap-for-scrolling-animations-2f10",
+    img: blog1,
+    link: "https://dev.to/wasp/build-a-real-time-voting-app-with-websockets-react-typescript-1bm9",
   },
   {
-    id: 2,
-    name: "How to create React Hamburger Menu using Styled-Components",
-    tags: ["react", "styled-components"],
+    name: "10+ Complex typeScript type defining Tips for Development",
+    tags: ["typescript", "webdev"],
     date: "5 July, 2021",
-    imgSrc:
-      "https://codebucks.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1625479747640%2F7KzwP9nmj.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75",
-    link: "https://codebucks.hashnode.dev/react-hamburger-menu",
+    img: blog2,
+    link: "https://dev.to/lakshmananarumugam/10-complex-typescript-type-defining-tips-for-development-1p3n",
   },
   {
-    id: 3,
-    name: "React Loading Screen: Try these 3 cool loading screens for your app",
-    tags: ["react", "react-lottie", "styled-components"],
+    name: "✨ 7 open-source libraries you must know in 2023 ⚡️",
+    tags: ["webdev", "javascript", "productivity"],
     date: "6 July, 2021",
-    imgSrc:
-      "https://codebucks.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1625552344293%2Fegwis0UIX.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75",
-    link: "https://codebucks.hashnode.dev/react-loading-screens",
+    img: blog3,
+    link: "https://dev.to/github20k/7-open-source-libraries-you-must-know-in-2023-2ach",
   },
   {
-    id: 4,
-    name: "How to build a Fabulous Todo App using React, Redux and Framer-Motion",
-    tags: ["react", "redux", "framer-motion"],
+    name: "Security in Code Reviews: Ensuring Secure and Robust Software Development",
+    tags: ["webdev", "tutorial", "beginners"],
     date: "26 May, 2021",
-    imgSrc:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--r5oUDhhT--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/036s7j5b73up7455rdth.png",
-    link: "https://dev.to/codebucks/build-redux-react-todo-list-app-with-animations-using-framer-motion-1mp1",
+    img: blog4,
+    link: "https://dev.to/documatic/security-in-code-reviews-ensuring-secure-and-robust-software-development-17kp",
   },
   {
-    id: 5,
     name: "What is Higher Order Component (HOC) in React JS?",
     tags: ["react", "reactJS", "web-development"],
     date: "3 Feb, 2021",
-    imgSrc:
-      "https://codebucks.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1625295480148%2FlyKj8bpHK.jpeg%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75",
+    img: blog5,
     link: "https://codebucks.hashnode.dev/what-is-higher-order-component",
   },
   {
-    id: 6,
-    name: "How to implement Pagination Component in React from scratch",
-    tags: ["react", "css"],
+    name: "Building an AI-Powered, Decentralized App for Time Management",
+    tags: ["ai", "web5", "openai"],
     date: "5 Jan, 2021",
-    imgSrc:
-      "https://codebucks.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1625240050668%2FGAya9b0XK.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75",
-    link: "https://codebucks.hashnode.dev/pagination-in-react",
+    img: blog6,
+    link: "https://dev.to/github/building-an-ai-powered-decentralized-app-for-time-management-88l",
   },
 
   {
-    id: 7,
     name: "What is Redux ? Simply Explained!",
     tags: ["react", "redux", "javascript"],
     date: "16 May, 2021",
-    imgSrc:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--ZY1EK-Eo--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bcz1u90oq3prr5fga3fs.png",
+    img: blog7,
     link: "https://dev.to/codebucks/what-is-redux-simply-explained-2ch7",
   },
   {
-    id: 8,
-    name: "How to create Sidebar navigation menu in ReactJS with react router and framer-motion",
-    tags: ["react", "framer-motion", "styled-components"],
+    name: "Build a Blog Website with ReactJs-PrimeReact and Hygraph Headless CMS",
+    tags: ["react", "nextjs", "webdev"],
     date: "26 May, 2021",
-    imgSrc:
-      "https://res.cloudinary.com/practicaldev/image/fetch/s--rv4I8UwE--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0a9h50milhlf1us6mn4a.png",
-    link: "https://dev.to/codebucks/build-sidebar-navigation-menu-in-reactjs-with-react-router-and-framer-motion-for-cool-page-transition-effects-4bc3",
+    img: blog8,
+    link: "https://dev.to/habubey/build-a-blog-website-with-reactjs-primereact-and-hygraph-headless-cms-m7a",
   },
 ];

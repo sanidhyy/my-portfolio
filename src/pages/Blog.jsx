@@ -80,8 +80,8 @@ const BlogPage = () => {
 
         <Center>
           <Grid>
-            {blogData.map((blog) => (
-              <BlogSingle key={blog.id} blog={blog} />
+            {blogData.map((blog, i) => (
+              <BlogSingle key={`Blog-`+i+1} blog={blog} />
             ))}
           </Grid>
         </Center>

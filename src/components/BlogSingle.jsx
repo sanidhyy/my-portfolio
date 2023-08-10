@@ -78,12 +78,12 @@ const item = {
 };
 
 const BlogComponent = ({ blog }) => {
-  const { name, tags, date, imgSrc, link } = blog;
+  const { name, tags, date, img, link } = blog;
 
   return (
     <Container variants={item}>
       <Box href={link} target="_blank" rel="noreferrer noopener">
-        <Image img={imgSrc} />
+        <Image img={img} />
         <Title>{name}</Title>
         <HashTags>
           {tags.map((tag, key) => {
