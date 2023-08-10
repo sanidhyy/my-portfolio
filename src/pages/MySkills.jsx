@@ -6,6 +6,7 @@ import { LightTheme } from "../config/themes";
 import { Design, Develope } from "../assets/images";
 import { Particle, BigTitle, Wrapper } from "../components";
 
+// Main styles
 const Main = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
@@ -16,6 +17,7 @@ const Main = styled(motion.div)`
   align-items: center;
 `;
 
+// Box styles
 const Box = styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
@@ -31,12 +33,14 @@ const Box = styled.div`
   justify-content: space-between;
   cursor: pointer;
 
+  /* on hover */
   &:hover {
     color: ${(props) => props.theme.body};
     background-color: ${(props) => props.theme.text};
   }
 `;
 
+// Title styles
 const Title = styled.h2`
   display: flex;
   justify-content: center;
@@ -54,6 +58,7 @@ const Title = styled.h2`
   }
 `;
 
+// Description styles
 const Description = styled.div`
   color: ${(props) => props.theme.text};
   font-size: calc(1vw + 0.6em);
@@ -74,21 +79,32 @@ const Description = styled.div`
   }
 `;
 
-const MySkillsPage = () => {
+// My Skills Page
+const MySkills = () => {
   return (
+    // theme provider
     <ThemeProvider theme={LightTheme}>
+      {/* main */}
       <Main exit={{ opacity: 0, transition: 0.2 }}>
+        {/* wrapper */}
         <Wrapper theme="light" />
+        {/* particle */}
         <Particle theme="light" />
+
+        {/* box 1 */}
         <Box>
+          {/* skill title */}
           <Title>
             <Design width={40} height={40} /> Designer
           </Title>
 
+          {/* skill description */}
           <Description>
             I love to create design which speaks, Keep it clean, minimal and
             simple.
           </Description>
+
+          {/* Skills */}
           <Description>
             <strong>I like to Design</strong>
             <ul>
@@ -110,14 +126,21 @@ const MySkillsPage = () => {
             </ul>
           </Description>
         </Box>
+
+        {/* box 2 */}
         <Box>
+          {/* skill title */}
           <Title>
             <Develope width={40} height={40} /> Frontend Developer
           </Title>
+
+          {/* skill description */}
           <Description>
             I value business or brand for which i'm creating, thus i enjoy
             bringing new ideas to life.
           </Description>
+
+          {/* skills */}
           <Description>
             <strong>Skills</strong>
             <p>
@@ -130,10 +153,11 @@ const MySkillsPage = () => {
           </Description>
         </Box>
 
+        {/* big title */}
         <BigTitle text="SKILLS" top="80%" right="30%" />
       </Main>
     </ThemeProvider>
   );
 };
 
-export default MySkillsPage;
+export default MySkills;

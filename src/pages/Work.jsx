@@ -7,6 +7,7 @@ import { workData } from "../data";
 import { YinYang } from "../assets/images";
 import { WorkSingle, BigTitle, Wrapper } from "../components";
 
+// Main styles
 const Main = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   height: calc(45vh * ${workData.length});
@@ -15,6 +16,7 @@ const Main = styled(motion.div)`
   align-items: center;
 `;
 
+// Box styles
 const Box = styled(motion.ul)`
   position: fixed;
   top: 12rem;
@@ -24,6 +26,7 @@ const Box = styled(motion.ul)`
   color: #fff;
 `;
 
+// Rotate styles
 const Rotate = styled.span`
   display: block;
   position: fixed;
@@ -46,10 +49,13 @@ const container = {
   },
 };
 
-const WorkPage = () => {
+// Work Page
+const Work = () => {
+  // main and yinyang ref
   const mainRef = useRef(null);
   const yinYangRef = useRef(null);
 
+  // rotate yinyang on window scroll
   useEffect(() => {
     let mainElement = mainRef.current;
     let yinYangElement = yinYangRef.current;
@@ -59,21 +65,29 @@ const WorkPage = () => {
       yinYangElement.style.transform = `rotate(${-window.scrollY}deg)`;
     };
 
+    // listen to window scroll event
     window.addEventListener("scroll", rotate);
+
+    // remove scroll event
     return () => window.removeEventListener("scroll", rotate);
   }, []);
 
   return (
+    // theme provider
     <ThemeProvider theme={DarkTheme}>
+      {/* main */}
       <Main exit={{ opacity: 0, transition: 0.2 }}>
+        {/* wrapper */}
         <Wrapper theme="dark" />
 
+        {/* work data */}
         <Box ref={mainRef} variants={container} initial="hidden" animate="show">
           {workData.map((data, i) => (
             <WorkSingle key={`work-${i + 1}`} data={data} />
           ))}
         </Box>
 
+        {/* yinyang */}
         <Rotate ref={yinYangRef}>
           <YinYang
             ref={yinYangRef}
@@ -83,10 +97,11 @@ const WorkPage = () => {
           />
         </Rotate>
 
+        {/* big title */}
         <BigTitle text="WORK" top="10%" right="20%" />
       </Main>
     </ThemeProvider>
   );
 };
 
-export default WorkPage;
+export default Work;

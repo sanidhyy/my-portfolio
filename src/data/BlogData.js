@@ -1,3 +1,6 @@
+// Contains blog data
+// Don't remove anything from here (if not sure)
+
 import {
   blog1,
   blog2,
@@ -9,6 +12,7 @@ import {
   blog8,
 } from "../assets/images";
 
+// Blog Data
 export const blogData = [
   {
     name: "Build a real-time voting app with WebSockets, React & TypeScript 🔌⚡️",

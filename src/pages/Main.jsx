@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
-
-// Sub Components
 import { NavLink } from "react-router-dom";
+
 import { YinYang } from "../assets/images";
 import { Intro, Wrapper } from "../components";
 import { EMAIL } from "../data";
 
+// rotate animation
 const rotate = keyframes`
   from{
     transform: rotate(0);
@@ -18,6 +18,7 @@ const rotate = keyframes`
   }
 `;
 
+// Main container styles
 const MainContainer = styled(motion.div)`
   background: ${(props) => props.theme.body};
   width: 100vw;
@@ -35,10 +36,12 @@ const MainContainer = styled(motion.div)`
   }
 `;
 
+// Container styles
 const Container = styled.div`
   padding: 2rem;
 `;
 
+// Contact styles
 const Contact = styled.a`
   color: ${(props) => props.theme.text};
   position: absolute;
@@ -48,6 +51,7 @@ const Contact = styled.a`
   z-index: 1;
 `;
 
+// Blog styles
 const Blog = styled(NavLink)`
   color: ${(props) => props.theme.text};
   position: absolute;
@@ -58,6 +62,7 @@ const Blog = styled(NavLink)`
   z-index: 1;
 `;
 
+// Work styles
 const Work = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
@@ -68,6 +73,7 @@ const Work = styled(NavLink)`
   z-index: 1;
 `;
 
+// Bottom Bar styles
 const BottomBar = styled.div`
   position: absolute;
   bottom: 1rem;
@@ -78,18 +84,21 @@ const BottomBar = styled.div`
   justify-content: space-evenly;
 `;
 
+// About styles
 const About = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   text-decoration: none;
   z-index: 1;
 `;
 
+// Skills styles
 const Skills = styled(NavLink)`
   color: ${(props) => props.theme.text};
   text-decoration: none;
   z-index: 1;
 `;
 
+// Center styles
 const Center = styled.button`
   position: absolute;
   top: ${(props) => (props.click ? "85%" : "50%")};
@@ -104,16 +113,19 @@ const Center = styled.button`
   align-items: center;
   transition: all 1s ease;
 
+  /* first element */
   & > :first-child {
     animation: ${rotate} infinite 1.5s linear;
   }
 
+  /* last element */
   & > :last-child {
     display: ${(props) => (props.click ? "none" : "inline-block")};
     padding-top: 1rem;
   }
 `;
 
+// Dark Div styles
 const DarkDiv = styled.div`
   position: absolute;
   top: 0;
@@ -126,20 +138,31 @@ const DarkDiv = styled.div`
   transition: height 0.5s ease, width 1s ease 0.5s;
 `;
 
+// Main
 const Main = () => {
+  // click and variants state
   const [click, setClick] = useState(false);
   const [variants, setVariants] = useState({});
 
+  // handle yinyang click
   const handleClick = () => setClick(!click);
 
   return (
+    // main container
     <MainContainer exit={variants}>
+      {/* dark div */}
       <DarkDiv click={click} />
+
+      {/* container */}
       <Container>
+        {/* wrapper */}
         <Wrapper theme={click ? "dark" : "light"} />
+        {/* dark div */}
         <DarkDiv click={click} />
 
+        {/* center */}
         <Center click={click} title="Click here">
+          {/* yinyang */}
           <YinYang
             onClick={() => handleClick()}
             width={click ? 120 : 200}
@@ -149,6 +172,7 @@ const Main = () => {
           <span>Click here</span>
         </Center>
 
+        {/* contact */}
         <Contact
           href={`mailto:${EMAIL}`}
           target="_blank"
@@ -171,6 +195,7 @@ const Main = () => {
           </motion.h3>
         </Contact>
 
+        {/* blog */}
         <Blog to="/blog">
           <motion.h2
             initial={{
@@ -195,6 +220,7 @@ const Main = () => {
           </motion.h2>
         </Blog>
 
+        {/* work */}
         <Work to="/work" click={click}>
           <motion.h2
             initial={{
@@ -219,7 +245,9 @@ const Main = () => {
           </motion.h2>
         </Work>
 
+        {/* bottom content */}
         <BottomBar>
+          {/* about */}
           <About to="/about" click={click}>
             <motion.h2
               initial={{
@@ -243,6 +271,8 @@ const Main = () => {
               About.
             </motion.h2>
           </About>
+
+          {/* skills */}
           <Skills to="/skills">
             <motion.h2
               initial={{
@@ -269,6 +299,7 @@ const Main = () => {
         </BottomBar>
       </Container>
 
+      {/* show intro on yinyang click */}
       {click && <Intro click={click} />}
     </MainContainer>
   );

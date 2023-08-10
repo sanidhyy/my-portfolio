@@ -6,6 +6,7 @@ import { blogBg } from "../assets/images";
 import { blogData } from "../data";
 import { BlogSingle, Anchor, BigTitle, Wrapper } from "../components";
 
+// Main container styles
 const MainContainer = styled(motion.div)`
   background-image: url(${blogBg});
   background-size: cover;
@@ -14,6 +15,7 @@ const MainContainer = styled(motion.div)`
   background-position: center;
 `;
 
+// Container styles
 const Container = styled.div`
   background-color: ${(props) => `rgba(${props.theme.bodyRgba}, 0.8)`};
   width: 100%;
@@ -22,6 +24,7 @@ const Container = styled.div`
   padding-bottom: 5rem;
 `;
 
+// Center styles
 const Center = styled.div`
   display: flex;
   justify-content: center;
@@ -29,6 +32,7 @@ const Center = styled.div`
   padding-top: 10rem;
 `;
 
+// Grid styles
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
@@ -47,26 +51,34 @@ const container = {
   },
 };
 
-const BlogPage = () => {
+// Blog Page
+const Blog = () => {
   const [number, setNumber] = useState(0);
 
+  // difference of anchor height & window height
   useEffect(() => {
     let num = (window.innerHeight - 70) / 30;
     setNumber(parseInt(num));
   }, []);
 
   return (
+    // Main container
     <MainContainer
       variants={container}
       initial="hidden"
       animate="show"
       exit={{ opacity: 0, transition: 0.2 }}
     >
+      {/* container */}
       <Container>
+        {/* wrapper */}
         <Wrapper />
+        {/* anchor */}
         <Anchor number={number} />
 
+        {/* center */}
         <Center>
+          {/* blog single */}
           <Grid>
             {blogData.map((blog, i) => (
               <BlogSingle key={`Blog-` + i + 1} blog={blog} />
@@ -74,10 +86,11 @@ const BlogPage = () => {
           </Grid>
         </Center>
 
+        {/* big title */}
         <BigTitle text="BLOG" top="5rem" left="5rem" />
       </Container>
     </MainContainer>
   );
 };
 
-export default BlogPage;
+export default Blog;

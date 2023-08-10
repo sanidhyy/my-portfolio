@@ -1,3 +1,7 @@
+// Contains work data
+// Don't remove anything from here (if not sure)
+
+// work data
 export const workData = [
   {
     name: "Disney+ Clone",

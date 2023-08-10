@@ -6,6 +6,7 @@ import { DarkTheme } from "../config/themes";
 import { spaceman } from "../assets/images";
 import { Particle, BigTitle, Wrapper } from "../components";
 
+// Main styles
 const Main = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
@@ -14,12 +15,14 @@ const Main = styled(motion.div)`
   overflow: hidden;
 `;
 
+// floating animation
 const float = keyframes`
   0% { transform: translateY(-10px) }
   50% { transform: translateY(15px) translateX(15px)  }
   100% { transform: translateY(-10px) }
 `;
 
+// Spaceman styles
 const Spaceman = styled.div`
   position: absolute;
   top: 10%;
@@ -27,12 +30,14 @@ const Spaceman = styled.div`
   width: 20vw;
   animation: ${float} 4s ease infinite;
 
+  // image
   img {
     width: 100%;
     height: auto;
   }
 `;
 
+// Box styles
 const Box = styled.div`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
@@ -53,16 +58,23 @@ const Box = styled.div`
   font-style: italic;
 `;
 
-const AboutPage = () => {
+// About
+const About = () => {
   return (
+    // theme provider
     <ThemeProvider theme={DarkTheme}>
+      {/* main */}
       <Main exit={{ opacity: 0, transition: 0.2 }}>
+        {/* wrapper */}
         <Wrapper theme="dark" />
+        {/* particle */}
         <Particle theme="dark" />
 
+        {/* spaceman */}
         <Spaceman>
           <img src={spaceman} alt="spaceman" />
         </Spaceman>
+        {/* box */}
         <Box>
           I'm a front-end developer located in India. I love to create simple
           yet beautiful websites with great user experience.
@@ -76,10 +88,11 @@ const AboutPage = () => {
           in it. You can connect with me via social links.
         </Box>
 
+        {/* Big title */}
         <BigTitle text="ABOUT" top="5%" left="5%" />
       </Main>
     </ThemeProvider>
   );
 };
 
-export default AboutPage;
+export default About;
