@@ -84,7 +84,7 @@ const SoundBar = () => {
 
   // render each line
   for (let i = 1; i <= LINES_NO; i++) {
-    lines.push(<Line click={click} />);
+    lines.push(<Line click={click} key={`Line` + i} />);
   }
 
   return (
