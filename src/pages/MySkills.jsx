@@ -7,7 +7,7 @@ import { Design, Develope } from "../assets/images";
 import { Particle, BigTitle, Wrapper } from "../components";
 
 // Main styles
-const Main = styled(motion.div)`
+const Main = styled(motion.main)`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;

@@ -19,7 +19,7 @@ const rotate = keyframes`
 `;
 
 // Main container styles
-const MainContainer = styled(motion.div)`
+const MainContainer = styled(motion.main)`
   background: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;

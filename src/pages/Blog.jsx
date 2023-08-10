@@ -7,7 +7,7 @@ import { blogData } from "../data";
 import { BlogSingle, Anchor, BigTitle, Wrapper } from "../components";
 
 // Main container styles
-const MainContainer = styled(motion.div)`
+const MainContainer = styled(motion.main)`
   background-image: url(${blogBg});
   background-size: cover;
   background-repeat: no-repeat;

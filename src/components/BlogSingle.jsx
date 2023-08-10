@@ -66,7 +66,7 @@ const Tag = styled.span`
 `;
 
 // Date styles
-const Date = styled.span`
+const Date = styled.time`
   padding: 0.5rem 0;
 `;
 
@@ -105,7 +105,7 @@ const BlogSingle = ({ blog }) => {
           })}
         </HashTags>
         {/* blog date */}
-        <Date>{date}</Date>
+        <Date dateTime={date}>{date}</Date>
       </Box>
     </Container>
   );

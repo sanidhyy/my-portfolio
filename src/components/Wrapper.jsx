@@ -4,7 +4,7 @@ import { PowerButton, Logo, SocialIcons } from ".";
 
 // Wrapper
 const Wrapper = ({ theme }) => (
-  <>
+  <aside>
     {/* Power Button */}
     <PowerButton />
 
@@ -13,7 +13,7 @@ const Wrapper = ({ theme }) => (
 
     {/* Social Icons */}
     <SocialIcons theme={theme || ""} />
-  </>
+  </aside>
 );
 
 export default Wrapper;

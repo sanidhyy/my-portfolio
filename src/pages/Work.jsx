@@ -8,7 +8,7 @@ import { YinYang } from "../assets/images";
 import { WorkSingle, BigTitle, Wrapper } from "../components";
 
 // Main styles
-const Main = styled(motion.div)`
+const Main = styled(motion.main)`
   background-color: ${(props) => props.theme.body};
   height: calc(45vh * ${workData.length});
   position: relative;
