@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import { PowerBtn } from "../assets/images";
 
+// Power
 const Power = styled.button`
   position: fixed;
   top: 2rem;
@@ -32,9 +33,11 @@ const Power = styled.button`
   }
 `;
 
+// Power Button
 const PowerButton = () => {
   return (
     <Power title="Home">
+      {/* Power Button Image */}
       <NavLink to="/">
         <PowerBtn width={30} height={30} fill="currentColor" />
       </NavLink>

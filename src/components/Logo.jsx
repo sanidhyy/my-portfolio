@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { DarkTheme } from "../config/themes";
 import { NAME, SHORTNAME } from "../data";
 
+// Logo Container styles
 const LogoContainer = styled.h1`
   display: inline-block;
   color: ${(props) =>
@@ -17,6 +18,7 @@ const LogoContainer = styled.h1`
   user-select: none;
 `;
 
+// Logo
 const Logo = ({ theme }) => {
   return (
     <LogoContainer color={theme} title={`${NAME}'s Portfolio`}>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { DarkTheme } from "../config/themes";
 import { socialData } from "../data";
 
+// Icons styles
 const Icons = styled.div`
   display: flex;
   flex-direction: column;
@@ -19,6 +20,7 @@ const Icons = styled.div`
   }
 `;
 
+// Line styles
 const Line = styled(motion.span)`
   width: 2px;
   height: 8rem;
@@ -26,6 +28,7 @@ const Line = styled(motion.span)`
     props.color === "dark" ? DarkTheme.text : DarkTheme.body};
 `;
 
+// Social Icon
 const SocialIcon = ({ id, name, Icon, link, theme }) => (
   <motion.div
     initial={{ transform: "scale(0)" }}
@@ -41,6 +44,7 @@ const SocialIcon = ({ id, name, Icon, link, theme }) => (
       target="_blank"
       rel="noreferrer noopener"
     >
+      {/* icon */}
       <Icon
         width={25}
         height={25}
@@ -50,13 +54,16 @@ const SocialIcon = ({ id, name, Icon, link, theme }) => (
   </motion.div>
 );
 
+// Social Icons
 const SocialIcons = ({ theme }) => {
   return (
+    // icons
     <Icons>
+      {/* each icon */}
       {socialData.map((data, i) => (
         <SocialIcon {...data} key={i} id={i} theme={theme} />
       ))}
-
+      {/* line */}
       <Line
         color={theme}
         initial={{

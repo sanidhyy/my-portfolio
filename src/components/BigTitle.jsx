@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+// Big Title
 const BigTitle = ({ text, top, left, right }) => {
+  // Text styles
   const Text = styled.h1`
     position: fixed;
     top: ${(props) => props.top};

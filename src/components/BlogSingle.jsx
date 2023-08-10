@@ -2,8 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
+// Container styles
 const Container = styled(motion.article)``;
 
+// Box styles
 const Box = styled(motion.a)`
   width: calc(10rem + 15vw);
   text-decoration: none;
@@ -25,6 +27,7 @@ const Box = styled(motion.a)`
   }
 `;
 
+// Image styles
 const Image = styled.div`
   background-image: ${(props) => `url(${props.img})`};
   width: 100%;
@@ -38,6 +41,7 @@ const Image = styled.div`
   }
 `;
 
+// Title styles
 const Title = styled.h3`
   color: inherit;
   padding: 0.5rem 0;
@@ -51,14 +55,17 @@ const Title = styled.h3`
   }
 `;
 
+// Hash Tags styles
 const HashTags = styled.div`
   padding: 0.5rem 0;
 `;
 
+// Tag styles
 const Tag = styled.span`
   padding-right: 0.5rem;
 `;
 
+// Date styles
 const Date = styled.span`
   padding: 0.5rem 0;
 `;
@@ -77,23 +84,31 @@ const item = {
   },
 };
 
-const BlogComponent = ({ blog }) => {
+// Blog Single
+const BlogSingle = ({ blog }) => {
+  // extract blog data
   const { name, tags, date, img, link } = blog;
 
   return (
+    // container
     <Container variants={item}>
+      {/* box wrapper */}
       <Box href={link} target="_blank" rel="noreferrer noopener">
+        {/* blog image */}
         <Image img={img} />
+        {/* blog title */}
         <Title>{name}</Title>
+        {/* blog hashtags */}
         <HashTags>
           {tags.map((tag, key) => {
             return <Tag key={key}>{tag}</Tag>;
           })}
         </HashTags>
+        {/* blog date */}
         <Date>{date}</Date>
       </Box>
     </Container>
   );
 };
 
-export default BlogComponent;
+export default BlogSingle;

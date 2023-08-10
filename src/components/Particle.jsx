@@ -6,6 +6,7 @@ import styled from "styled-components";
 import configDark from "../config/particlejs.json";
 import configLight from "../config/particlejs-light.json";
 
+// Box styles
 const Box = styled.div`
   position: absolute;
   top: 0;
@@ -15,13 +16,17 @@ const Box = styled.div`
   z-index: 0;
 `;
 
+// Particle
 const Particle = ({ theme }) => {
+  // initialise tsparticle object
   const particlesInit = async (main) => {
     await loadFull(main);
   };
 
   return (
+    // box wrapper
     <Box>
+      {/* particles */}
       <Particles
         init={particlesInit}
         style={{ position: "absolute", top: 0 }}

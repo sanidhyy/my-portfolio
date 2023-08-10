@@ -3,8 +3,10 @@ import styled, { keyframes, css } from "styled-components";
 
 import music from "../assets/audio/music.mp3";
 
+// No of sound bars/lines
 const LINES_NO = 5;
 
+// delay in every sound line
 const delayLinesCSS = () => {
   let csslines = "";
 
@@ -21,6 +23,7 @@ const delayLinesCSS = () => {
   `;
 };
 
+// Box styles
 const Box = styled.div`
   display: flex;
   cursor: pointer;
@@ -29,9 +32,11 @@ const Box = styled.div`
   top: 3rem;
   z-index: 10;
 
-  ${delayLinesCSS()};
+  /* delay css lines */
+  ${delayLinesCSS()}
 `;
 
+// play animation
 const play = keyframes`
     0%  {
         transform: scaleY(1);
@@ -44,6 +49,7 @@ const play = keyframes`
     }
 `;
 
+// Line styles
 const Line = styled.span`
   background: ${(props) => props.theme.text};
   border: 1px solid ${(props) => props.theme.body};
@@ -54,11 +60,15 @@ const Line = styled.span`
   margin: 0 0.1rem;
 `;
 
+// Sound Bar
 const SoundBar = () => {
+  // music ref
   const musicRef = useRef(null);
 
+  // sound bar click status
   const [click, setClick] = useState(false);
 
+  // handle sound bar click
   const handleClick = () => {
     setClick(!click);
 
@@ -69,16 +79,20 @@ const SoundBar = () => {
     }
   };
 
+  // sound lines
   const lines = [];
 
+  // render each line
   for (let i = 1; i <= LINES_NO; i++) {
     lines.push(<Line click={click} />);
   }
 
   return (
+    // Box Wrapper
     <Box onClick={() => handleClick()} title="Play Music">
       {lines}
 
+      {/* audio */}
       <audio src={music} ref={musicRef} loop></audio>
     </Box>
   );

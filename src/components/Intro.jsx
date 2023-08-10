@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { profileImg } from "../assets/images";
 import { NAME } from "../data";
 
+// Box styles
 const Box = styled(motion.div)`
   position: absolute;
   left: 50%;
@@ -32,6 +33,7 @@ const Box = styled(motion.div)`
   z-index: 1;
 `;
 
+// Sub Box styles
 const SubBox = styled.div`
   width: 50%;
   position: relative;
@@ -47,6 +49,7 @@ const SubBox = styled.div`
   }
 `;
 
+// Text styles
 const Text = styled.div`
   font-size: calc(1em + 1.5vw);
   color: ${(props) => props.theme.body};
@@ -63,14 +66,18 @@ const Text = styled.div`
   }
 `;
 
+// Intro
 const Intro = () => {
   return (
+    // Box
     <Box
       initial={{ height: 0 }}
       animate={{ height: "55vh" }}
       transition={{ type: "spring", duration: 2, delay: 1 }}
     >
+      {/* wrapper sub box */}
       <SubBox>
+        {/* text */}
         <Text>
           <h1>Hi,</h1>
           <h3>I'm {NAME}.</h3>
@@ -78,7 +85,9 @@ const Intro = () => {
         </Text>
       </SubBox>
 
+      {/* wrapper sub box */}
       <SubBox>
+        {/* profile image */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
