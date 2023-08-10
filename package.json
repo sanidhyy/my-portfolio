@@ -2,6 +2,25 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "private": true,
+  "author": "Sanidhya Kr. Verma",
+  "description": "Modern Portfolio using React JS and Framer Motion",
+  "keywords": [
+    "reactjs",
+    "react",
+    "portfolio",
+    "yinyang",
+    "framer-motion",
+    "tsparticles",
+    "js",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Technical-Shubham-tech/my-portfolio"
+  },
+  "license": "MIT",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.14.1",
