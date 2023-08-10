@@ -2,9 +2,9 @@
 // Don't remove anything from here (if not sure)
 
 // exporting all images
-export { default as blogBg } from "./blog-bg.jpg";
-export { default as profileImg } from "./profile-img.png";
-export { default as spaceman } from "./spaceman.png";
+export { default as blogBg } from "./blog-bg.webp";
+export { default as profileImg } from "./profile-img.webp";
+export { default as spaceman } from "./spaceman.webp";
 
 // exporting all svgs as react component
 
