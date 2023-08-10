@@ -4,13 +4,7 @@ import { motion } from "framer-motion";
 
 import { LightTheme } from "../config/themes";
 import { Design, Develope } from "../assets/images";
-import {
-  Logo,
-  SocialIcons,
-  PowerButton,
-  Particle,
-  BigTitle,
-} from "../components";
+import { Particle, BigTitle, Wrapper } from "../components";
 
 const Main = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
@@ -84,9 +78,7 @@ const MySkillsPage = () => {
   return (
     <ThemeProvider theme={LightTheme}>
       <Main exit={{ opacity: 0, transition: 0.2 }}>
-        <Logo theme="light" />
-        <SocialIcons theme="light" />
-        <PowerButton />
+        <Wrapper theme="light" />
         <Particle theme="light" />
         <Box>
           <Title>

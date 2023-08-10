@@ -4,13 +4,7 @@ import { motion } from "framer-motion";
 
 import { DarkTheme } from "../config/themes";
 import { spaceman } from "../assets/images";
-import {
-  Logo,
-  SocialIcons,
-  PowerButton,
-  Particle,
-  BigTitle,
-} from "../components";
+import { Particle, BigTitle, Wrapper } from "../components";
 
 const Main = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
@@ -63,9 +57,7 @@ const AboutPage = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
       <Main exit={{ opacity: 0, transition: 0.2 }}>
-        <Logo theme="dark" />
-        <SocialIcons theme="dark" />
-        <PowerButton />
+        <Wrapper theme="dark" />
         <Particle theme="dark" />
 
         <Spaceman>

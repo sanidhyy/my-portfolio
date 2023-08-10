@@ -4,14 +4,7 @@ import { motion } from "framer-motion";
 
 import { blogBg } from "../assets/images";
 import { blogData } from "../data";
-import {
-  Logo,
-  PowerButton,
-  SocialIcons,
-  BlogSingle,
-  Anchor,
-  BigTitle,
-} from "../components";
+import { BlogSingle, Anchor, BigTitle, Wrapper } from "../components";
 
 const MainContainer = styled(motion.div)`
   background-image: url(${blogBg});
@@ -70,9 +63,7 @@ const BlogPage = () => {
       exit={{ opacity: 0, transition: 0.2 }}
     >
       <Container>
-        <Logo />
-        <PowerButton />
-        <SocialIcons />
+        <Wrapper />
         <Anchor number={number} />
 
         <Center>

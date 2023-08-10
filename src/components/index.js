@@ -12,3 +12,4 @@ export { default as PowerButton } from "./PowerButton";
 export { default as SocialIcons } from "./SocialIcons";
 export { default as SoundBar } from "./SoundBar";
 export { default as AnimatedRoutes } from "./AnimatedRoutes";
+export { default as Wrapper } from "./Wrapper";

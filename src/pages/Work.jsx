@@ -5,13 +5,7 @@ import { motion } from "framer-motion";
 import { DarkTheme } from "../config/themes";
 import { workData } from "../data";
 import { YinYang } from "../assets/images";
-import {
-  Logo,
-  SocialIcons,
-  PowerButton,
-  WorkSingle,
-  BigTitle,
-} from "../components";
+import { WorkSingle, BigTitle, Wrapper } from "../components";
 
 const Main = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
@@ -72,9 +66,7 @@ const WorkPage = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
       <Main exit={{ opacity: 0, transition: 0.2 }}>
-        <Logo theme="dark" />
-        <SocialIcons theme="dark" />
-        <PowerButton />
+        <Wrapper theme="dark" />
 
         <Box ref={mainRef} variants={container} initial="hidden" animate="show">
           {workData.map((data, i) => (

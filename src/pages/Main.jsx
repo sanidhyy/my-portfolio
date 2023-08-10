@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 
 // Sub Components
 import { NavLink } from "react-router-dom";
 import { YinYang } from "../assets/images";
-import { PowerButton, Logo, SocialIcons, Intro } from "../components";
+import { Intro, Wrapper } from "../components";
 import { EMAIL } from "../data";
 
 const rotate = keyframes`
@@ -136,9 +136,7 @@ const Main = () => {
     <MainContainer exit={variants}>
       <DarkDiv click={click} />
       <Container>
-        <PowerButton />
-        <Logo theme={click ? "dark" : "light"} />
-        <SocialIcons theme={click ? "dark" : "light"} />
+        <Wrapper theme={click ? "dark" : "light"} />
         <DarkDiv click={click} />
 
         <Center click={click} title="Click here">
