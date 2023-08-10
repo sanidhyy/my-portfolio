@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./globalStyles";
 
 // pages
-import { LightTheme } from "./config/themes";
+import { LightTheme } from "./config/themes.js";
 
 // components
 import { SoundBar, AnimatedRoutes } from "./components";
