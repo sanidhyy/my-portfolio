@@ -67,10 +67,7 @@ const BlogPage = () => {
       variants={container}
       initial="hidden"
       animate="show"
-      exit={{
-        opacity: 0,
-        transition: { duration: 0.5 },
-      }}
+      exit={{ opacity: 0, transition: 0.2 }}
     >
       <Container>
         <Logo />
@@ -81,7 +78,7 @@ const BlogPage = () => {
         <Center>
           <Grid>
             {blogData.map((blog, i) => (
-              <BlogSingle key={`Blog-`+i+1} blog={blog} />
+              <BlogSingle key={`Blog-` + i + 1} blog={blog} />
             ))}
           </Grid>
         </Center>

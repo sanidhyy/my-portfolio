@@ -1,5 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
+import { motion } from "framer-motion";
+
 import { LightTheme } from "../config/themes";
 import { Design, Develope } from "../assets/images";
 import {
@@ -10,7 +12,7 @@ import {
   BigTitle,
 } from "../components";
 
-const Main = styled.div`
+const Main = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;
@@ -81,7 +83,7 @@ const Description = styled.div`
 const MySkillsPage = () => {
   return (
     <ThemeProvider theme={LightTheme}>
-      <Main>
+      <Main exit={{ opacity: 0, transition: 0.2 }}>
         <Logo theme="light" />
         <SocialIcons theme="light" />
         <PowerButton />

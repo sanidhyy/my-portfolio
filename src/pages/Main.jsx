@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 
@@ -18,7 +18,7 @@ const rotate = keyframes`
   }
 `;
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
   background: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;
@@ -128,11 +128,12 @@ const DarkDiv = styled.div`
 
 const Main = () => {
   const [click, setClick] = useState(false);
+  const [variants, setVariants] = useState({});
 
   const handleClick = () => setClick(!click);
 
   return (
-    <MainContainer>
+    <MainContainer exit={variants}>
       <DarkDiv click={click} />
       <Container>
         <PowerButton />
@@ -185,6 +186,12 @@ const Main = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             title="Blog"
+            onClick={() =>
+              setVariants({
+                x: -window.innerWidth,
+                transition: { duration: 0.8 },
+              })
+            }
           >
             Blog
           </motion.h2>
@@ -203,6 +210,12 @@ const Main = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             title="My Work"
+            onClick={() =>
+              setVariants({
+                x: window.innerWidth,
+                transition: { duration: 0.8 },
+              })
+            }
           >
             Work
           </motion.h2>
@@ -222,6 +235,12 @@ const Main = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               title="About Me"
+              onClick={() =>
+                setVariants({
+                  y: -window.innerHeight,
+                  transition: { duration: 0.8 },
+                })
+              }
             >
               About.
             </motion.h2>
@@ -239,6 +258,12 @@ const Main = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               title="My Skills"
+              onClick={() =>
+                setVariants({
+                  y: -window.innerHeight,
+                  transition: { duration: 0.8 },
+                })
+              }
             >
               My Skills.
             </motion.h2>

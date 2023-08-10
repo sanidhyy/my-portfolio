@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider, keyframes } from "styled-components";
+import { motion } from "framer-motion";
 
 import { DarkTheme } from "../config/themes";
 import { spaceman } from "../assets/images";
@@ -11,7 +12,7 @@ import {
   BigTitle,
 } from "../components";
 
-const Main = styled.div`
+const Main = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;
@@ -61,7 +62,7 @@ const Box = styled.div`
 const AboutPage = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
-      <Main>
+      <Main exit={{ opacity: 0, transition: 0.2 }}>
         <Logo theme="dark" />
         <SocialIcons theme="dark" />
         <PowerButton />

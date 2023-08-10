@@ -13,7 +13,7 @@ import {
   BigTitle,
 } from "../components";
 
-const Main = styled.div`
+const Main = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   height: calc(45vh * ${workData.length});
   position: relative;
@@ -71,7 +71,7 @@ const WorkPage = () => {
 
   return (
     <ThemeProvider theme={DarkTheme}>
-      <Main>
+      <Main exit={{ opacity: 0, transition: 0.2 }}>
         <Logo theme="dark" />
         <SocialIcons theme="dark" />
         <PowerButton />
