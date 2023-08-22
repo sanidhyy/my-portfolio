@@ -16,6 +16,9 @@ export { default as blog6 } from "./blog/blog-6.webp";
 export { default as blog7 } from "./blog/blog-7.webp";
 export { default as blog8 } from "./blog/blog-8.webp";
 
+// exporting placeholder image
+export { default as placeholder } from "./placeholder.webp";
+
 // exporting all svgs as react component
 
 // Power Button

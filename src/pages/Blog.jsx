@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { blogBg } from "../assets/images";
+import { blogBg, placeholder } from "../assets/images";
 import { NAME, blogData } from "../data";
 import { BlogSingle, Anchor, BigTitle, Wrapper } from "../components";
 import useDocumentTitle from "../useDocumentTitle";
+import { useLazyLoadImage } from "../utils";
 
 // Main container styles
 const MainContainer = styled(motion.main)`
-  background-image: url(${blogBg});
+  background-image: ${(props) =>
+    `url(${useLazyLoadImage(props.img) || placeholder})`};
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -68,6 +70,7 @@ const Blog = () => {
   return (
     // Main container
     <MainContainer
+      img={blogBg}
       variants={container}
       initial="hidden"
       animate="show"

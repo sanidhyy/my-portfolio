@@ -77,7 +77,7 @@ const About = () => {
 
         {/* spaceman */}
         <Spaceman>
-          <img src={spaceman} alt="spaceman" />
+          <img src={spaceman} alt="spaceman" loading="lazy" />
         </Spaceman>
         {/* box */}
         <Box>

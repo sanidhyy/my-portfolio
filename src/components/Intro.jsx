@@ -93,7 +93,12 @@ const Intro = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2 }}
         >
-          <img className="profile-img" src={profileImg} alt="Profile" />
+          <img
+            className="profile-img"
+            src={profileImg}
+            alt="Profile"
+            loading="lazy"
+          />
         </motion.div>
       </SubBox>
     </Box>

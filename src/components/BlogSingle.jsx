@@ -2,6 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
+import { placeholder } from "../assets/images";
+import { useLazyLoadImage } from "../utils";
+
 // Container styles
 const Container = styled(motion.article)``;
 
@@ -29,7 +32,8 @@ const Box = styled(motion.a)`
 
 // Image styles
 const Image = styled.div`
-  background-image: ${(props) => `url(${props.img})`};
+  background-image: ${(props) =>
+    `url(${useLazyLoadImage(props.img) || placeholder})`};
   width: 100%;
   height: 60%;
   background-size: cover;
