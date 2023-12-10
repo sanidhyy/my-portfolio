@@ -7,7 +7,7 @@ export const socialData = [
   {
     name: "Github",
     Icon: Github,
-    link: "https://github.com/Technical-Shubham-tech",
+    link: "https://github.com/sanidhyy",
   },
   {
     name: "Twitter",
