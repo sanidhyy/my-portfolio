@@ -10,7 +10,7 @@ export const workData = [
     tags: ["react", "firebase", "css"],
 
     demo: "https://clonedisneyplus.web.app/",
-    github: "https://github.com/Technical-Shubham-tech/disney-clone",
+    github: "https://github.com/sanidhyy/disney-clone",
   },
   {
     name: "Golds Gym",
@@ -19,7 +19,7 @@ export const workData = [
     tags: ["react", "rapidapi", "tailwindcss"],
 
     demo: "https://fitness-gym-react.netlify.app/",
-    github: "https://github.com/Technical-Shubham-tech/fitness-app",
+    github: "https://github.com/sanidhyy/fitness-app",
   },
   {
     name: "Shoppy",
@@ -28,7 +28,7 @@ export const workData = [
     tags: ["react", "syncfusion", "scss"],
 
     demo: "https://shoppy-dashboard-react.netlify.app/",
-    github: "https://github.com/Technical-Shubham-tech/admin-dashboard",
+    github: "https://github.com/sanidhyy/admin-dashboard",
   },
   {
     name: "TikTok Clone",
@@ -37,7 +37,7 @@ export const workData = [
     tags: ["nextjs", "nodejs", "tailwindcss"],
 
     demo: "https://tiktok-clone-react.vercel.app/",
-    github: "https://github.com/Technical-Shubham-tech/tiktok-clone",
+    github: "https://github.com/sanidhyy/tiktok-clone",
   },
   {
     name: "Cryptoverse",
@@ -46,7 +46,7 @@ export const workData = [
     tags: ["react", "rapidapi", "css"],
 
     demo: "https://reactjscryptoapp.netlify.app/",
-    github: "https://github.com/Technical-Shubham-tech/crypto-app",
+    github: "https://github.com/sanidhyy/crypto-app",
   },
   {
     name: "Travel Advisor",
@@ -55,6 +55,6 @@ export const workData = [
     tags: ["react", "rapidapi", "material-ui"],
 
     demo: "https://travel-advisor-reactjs.netlify.app/",
-    github: "https://github.com/Technical-Shubham-tech/travel-advisor",
+    github: "https://github.com/sanidhyy/travel-advisor",
   },
 ];
