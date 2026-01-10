@@ -17,7 +17,7 @@ export const socialData = [
   {
     name: "Linkedin",
     Icon: Linkedin,
-    link: "https://www.linkedin.com/in/sanidhya-verma-ab8a38186/",
+    link: "https://www.linkedin.com/in/sanidhyy",
   },
   {
     name: "YouTube",
