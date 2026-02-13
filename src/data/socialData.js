@@ -12,7 +12,7 @@ export const socialData = [
   {
     name: "Twitter",
     Icon: Twitter,
-    link: "https://twitter.com/sanidhyyy",
+    link: "https://x.com/_sanidhyy",
   },
   {
     name: "Linkedin",
