@@ -22,6 +22,6 @@ export const socialData = [
   {
     name: "YouTube",
     Icon: YouTube,
-    link: "https://youtube.com/@OPGAMER.",
+    link: "https://youtube.com",
   },
 ];
