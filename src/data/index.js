@@ -3,7 +3,7 @@
 
 const NAME = "Shubham"; // site name
 const SHORTNAME = "SB"; // site shortname
-const EMAIL = "sanidhya.verma12345@gmail.com"; // contact email
+const EMAIL = "sanidhyyy@gmail.com"; // contact email
 
 // exporting all data
 export { socialData } from "./socialData";
