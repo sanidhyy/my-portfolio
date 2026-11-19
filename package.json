@@ -23,7 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^15.0.5",
     "@testing-library/user-event": "^14.4.3",
     "framer-motion": "^10.12.16",
