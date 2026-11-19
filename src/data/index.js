@@ -6,9 +6,9 @@ const SHORTNAME = "SB"; // site shortname
 const EMAIL = "sanidhyyy@gmail.com"; // contact email
 
 // exporting all data
-export { socialData } from "./socialData";
-export { workData } from "./workData";
-export { blogData } from "./blogData";
+export { socialData } from "./SocialData";
+export { workData } from "./WorkData";
+export { blogData } from "./BlogData";
 
 // exporting all constants
 export { NAME, SHORTNAME, EMAIL };

@@ -1,6 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router";
-import { Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import { Main, About, Blog, Work, MySkills } from "../pages";
