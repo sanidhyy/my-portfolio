@@ -1,0 +1,6 @@
+allowBuilds:
+  '@tsparticles/engine': false
+  core-js: false
+  core-js-pure: false
+  react-tsparticles: false
+  tsparticles-engine: false

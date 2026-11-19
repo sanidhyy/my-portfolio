@@ -11,18 +11,12 @@
 [![GitHub issues](https://img.shields.io/github/issues/sanidhyy/my-portfolio)](https://github.com/sanidhyy/my-portfolio/issues "GitHub issues")
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/sanidhyy/my-portfolio)](https://github.com/sanidhyy/my-portfolio/pulls "GitHub pull requests")
 
-## :warning: Before you start
-
-1. Make sure [Git](https://git-scm.com "Git") and [NodeJS](https://nodejs.org "NodeJS") are installed
-2. **Yarn** is faster than Npm. So use [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/ "Yarn").
-3. You are ready to go :fire:.
-
 ## :pushpin: How to use this App?
 
 1. Clone this **repository** to your local computer.
 2. Open **terminal** in root directory.
-3. Type and Run `npm install` or `yarn install`.
-4. Once packages are installed, you can start this app using `npm start` or `yarn start`.
+3. Type and Run `npm install` or `pnpm install`.
+4. Once packages are installed, you can start this app using `npm start` or `pnpm start`.
 5. Now app is fully configured and you can start using this app :+1:.
 
 ### :raising_hand: Need Help?
@@ -81,7 +75,7 @@ You can also give this repository a star to show more people and they can use th
 
 In the project directory, you can run:
 
-### `yarn run dev`
+### `pnpm run dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -89,12 +83,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `yarn test`
+### `pnpm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn run build`
+### `pnpm run build`
 
 Builds the app for production to the `dist` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -104,7 +98,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### `pnpm eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
@@ -140,6 +134,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn run build` fails to minify
+### `pnpm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
